@@ -1,49 +1,42 @@
-UniLink - Student Affairs Management System (Backend)
-https://img.shields.io/badge/Java-17-orange
-https://img.shields.io/badge/Spring%2520Boot-3.0-green
-https://img.shields.io/badge/Spring%2520Security-JWT-blue
-https://img.shields.io/badge/MySQL-8.0-lightblue
+🎓 UniLink - Student Affairs Management System (Backend)
 
-📋 Project Overview
-UniLink is a comprehensive digital platform designed to streamline communication and service delivery between students and university administration. This repository contains the backend service built with Java Spring Boot that powers the UniLink application.
+📋 Overview
 
+UniLink is a comprehensive backend service built with Java Spring Boot to streamline communication and service management between students and university administration.
+The system provides a secure, scalable, and efficient digital platform for handling student affairs such as service requests, appointment scheduling, and document management.
 
 🎯 Key Features
-Dual-Role Authentication System (Student & Staff)
 
-Service Request Management (Submit, Track, Update Status)
+🔐 Dual-Role Authentication System – Secure login for both students and staff.
 
-Appointment Scheduling System with Conflict Prevention
+📨 Service Request Management – Submit, track, and update request statuses.
 
-Real-time Notification System
+📅 Appointment Scheduling System – Book and manage appointments with conflict prevention.
 
-Document Upload & Management
+🔔 Real-Time Notifications – Instant updates on request and appointment changes.
 
-Role-Based Access Control
+📂 Document Upload & Management – Secure storage and retrieval of digital files.
 
-RESTful API Architecture
+🧩 Role-Based Access Control (RBAC) – Access restrictions based on user roles.
+
+🌐 RESTful API Architecture – Clean and well-documented endpoints.
 
 🛠 Tech Stack
-Backend Framework: Java 17, Spring Boot 3.0
-
-Security: Spring Security, JWT Authentication
-
-Database: MySQL with Spring Data JPA & Hibernate
-
-API Documentation: Swagger/OpenAPI
-
-Testing: JUnit, Mockito, Postman
-
-Build Tool: Maven
-
+Category	Technologies
+Backend Framework	Java 17, Spring Boot 3.0
+Security	Spring Security, JWT Authentication
+Database	MySQL 8.0, Spring Data JPA, Hibernate
+API Documentation	Swagger / OpenAPI
+Testing	JUnit, Mockito, Postman
+Build Tool	Maven
 🏗 System Architecture
-Controller Layer (REST APIs)
-    ↓
-Service Layer (Business Logic)
-    ↓
-Repository Layer (Data Access)
-    ↓
-Database (MySQL)
+Controller Layer  (REST APIs)
+        ↓
+Service Layer     (Business Logic)
+        ↓
+Repository Layer  (Data Access)
+        ↓
+Database          (MySQL)
 
 📁 Project Structure
 src/
@@ -61,80 +54,81 @@ src/
 │       └── data.sql        # Initial data
 
 🚀 Installation & Setup
+✅ Prerequisites
 
-Prerequisites
 Java 17 or higher
 
-MySQL 8.0
+MySQL 8.0+
 
 Maven 3.6+
 
-Steps to Run Locally
+⚙️ Steps to Run Locally
+
 Clone the repository
 
-bash
 git clone https://github.com/MahmoudEhab3/Student-Affairs-Backend.git
 cd Student-Affairs-Backend
-Configure Database
 
-bash
-# Create MySQL database
+
+Create MySQL database
+
 CREATE DATABASE unilink_db;
+
+
 Update application properties
 
-properties
 # src/main/resources/application.properties
 spring.datasource.url=jdbc:mysql://localhost:3306/unilink_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+
+
 Run the application
 
-bash
 mvn spring-boot:run
-Access API Documentation
 
-text
+
+Access API documentation
+
 http://localhost:8080/swagger-ui.html
+
 📚 API Endpoints
-Authentication
+🔑 Authentication
 Method	Endpoint	Description
 POST	/api/auth/login	User authentication
 POST	/api/auth/register	User registration
 POST	/api/auth/refresh	Refresh JWT token
-Requests Management
+📨 Requests Management
 Method	Endpoint	Description
-GET	/api/requests	Get all requests (Staff)
-POST	/api/requests	Create new request (Student)
+GET	/api/requests	Get all requests (Staff only)
+POST	/api/requests	Create a new request (Student)
 PUT	/api/requests/{id}	Update request status (Staff)
-GET	/api/requests/student/{studentId}	Get student's requests
-Appointments
+GET	/api/requests/student/{studentId}	Get student’s requests
+📅 Appointments
 Method	Endpoint	Description
 GET	/api/appointments	Get available slots
 POST	/api/appointments	Book appointment
 PUT	/api/appointments/{id}	Reschedule appointment
 DELETE	/api/appointments/{id}	Cancel appointment
-For complete API documentation, run the application and visit /swagger-ui.html
+
+💡 For full API documentation, visit /swagger-ui.html after running the project.
 
 🧪 Testing
-Run Unit Tests
-bash
+🧱 Run Unit Tests
 mvn test
-API Testing with Postman
+
+🧰 API Testing with Postman
+
 Import the Postman collection from /docs/postman-collection.json
 
-Update environment variables
+Set up environment variables
 
-Execute test scenarios
+Run automated test scenarios
 
 👥 Team Structure
-Backend Team (2 Developers):
 
-Mahmoud Ehab - Primary Backend Developer (Sprint 2)
+Backend Development Team (2 Members)
 
-Ahmed hegazy - Backend Developer
+Mahmoud Ehab – Lead Backend Developer (Sprint 2)
 
-
-
-
-You can customize the contact details and add any specific technical details about your implementation.
-
+Ahmed Hegazy – Backend Developer (API Development & Testing)
