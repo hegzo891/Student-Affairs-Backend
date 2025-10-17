@@ -52,7 +52,7 @@ Database          (MySQL)
 ```
 
 
-## 🏗 System Architecture
+## 📁 Project Structure
 ```text
 src/
 ├── main/
