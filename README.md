@@ -40,7 +40,7 @@ Built with **Java Spring Boot**, it offers secure authentication, request tracki
 ---
 
 ## 🏗 System Architecture
-
+```text
 
 Controller Layer  (REST APIs)
         ↓
@@ -49,11 +49,11 @@ Service Layer     (Business Logic)
 Repository Layer  (Data Access)
         ↓
 Database          (MySQL)
-
+```
 
 
 ## 🏗 System Architecture
-
+```text
 src/
 ├── main/
 │   ├── java/com/unilink/
@@ -67,4 +67,5 @@ src/
 │   └── resources/
 │       ├── application.properties
 │       └── data.sql        # Initial data
+```
 
